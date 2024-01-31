@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BaatCheet</title>
+    <link rel="stylesheet" href="./style/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+</head>
+<body>
+    <div id="main">
+        <div id="box">
+            <div id="top">
+                <div id="logo">
+                    <img src="./logo/BaatCheet (1).png" alt="">
+                    <h2>BaatCheet</h2>
+                </div>
+                <div id="icon">
+                    <i class="ri-menu-3-fill"></i>
+                </div>
+            </div>
+             <div id="bottom">
+                <div id="left">
+                    <div class="user-dets">
+                        <h2>Peoples</h2>
+                        <h4 class="users-count">0</h4>
+                    </div>
+                    <div class="user-list">
+                        
+                    </div>
+                </div>
+                <div id="right">
+                        <div id="chat-window">
+                            
+                            
+                        </div>
+                        <div id="chat-input">
+                            <input id="user-msg" type="text" placeholder="write your message.....">
+                            <button type="button" id="user-send">Send</button>
+                        </div>
+                </div>
+            </div> 
+        </div>
+    </div>
+
+    <script>
+        function chatwindow(){
+            var flag = true
+        document.querySelector("#icon")
+        .addEventListener("click",function(){
+            if(flag){
+            document.querySelector("#left").style.display ="initial";
+            flag= false;
+            }
+            else{
+            document.querySelector("#left").style.display ="none";
+            flag=true;
+            }
+        })
+        }
+        chatwindow();
+    </script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/js/client.js"></script>
+</body>
+</html>
